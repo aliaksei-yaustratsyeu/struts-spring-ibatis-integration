@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="employeeForm" type="by.example.form.employee.EmployeeForm"/>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/employeesList" name="employeeForm" type="by.example.action.employee.EmployeeAction">
+            <forward name="list" path="/WEB-INF/pages/employee/employees-list.jsp"/>
+        </action>
+    </action-mappings>
+
+    <controller processorClass="by.example.servlet.SpringRequestProcessor"/>
+
+</struts-config>

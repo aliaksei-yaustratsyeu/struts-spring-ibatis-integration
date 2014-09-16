@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC '-//iBATIS.com//DTD SQL Map 2.0//EN' 'http://www.ibatis.com/dtd/sql-map-2.dtd'>
+
+<sqlMap namespace="employee">
+
+    <resultMap id="EmployeeResultMap" class="by.example.model.employee.Employee">
+        <result property="id" column="id"/>
+        <result property="firstName" column="first_name"/>
+        <result property="lastName" column="last_name"/>
+    </resultMap>
+
+    <select id="getEmployees" resultMap="EmployeeResultMap">
+        select id, first_name, last_name
+        from employees
+    </select>
+
+</sqlMap>
